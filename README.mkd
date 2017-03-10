@@ -1,4 +1,4 @@
-# Symbol Type
+# Symbol Type Repro
 On x86-64 this correctly prints,
 ```
 $ make run
