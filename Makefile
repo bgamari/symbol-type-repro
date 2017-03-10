@@ -1,3 +1,5 @@
+all : lib.s main
+
 %.s : %.ll
 	llc -o $@ $+
 
