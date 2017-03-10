@@ -12,21 +12,34 @@ This is due to PLT relocation mandate set forth in ELF for ARM specification
 (v2.10), section 3.1.3.1, which breaks the dereference of the `hello` symbol's
 prefix data.
 
-
-## ARM environment
+On Aarch64, this instead produces
 ```
-$ llc --version
-LLVM (http://llvm.org/):
-  LLVM version 3.8.1
-$ gcc --version
-gcc (Debian 4.9.2-10) 4.9.2
+hi: -702610912
 ```
 
-### x86-64 environment
+## x86-64 environment
 ```
 $ gcc --version
 gcc (Debian 6.3.0-6) 6.3.0 20170205
 $ llc --version
 LLVM (http://llvm.org/):
   LLVM version 3.7.0
+```
+
+## Aarch64 environment
+```
+$ gcc --version
+gcc (Ubuntu/Linaro 5.4.0-6ubuntu1~16.04.4) 5.4.0 20160609
+$ llc --version
+LLVM (http://llvm.org/):
+  LLVM version 3.7.1
+```
+
+## ARM environment
+```
+$ gcc --version
+gcc (Debian 4.9.2-10) 4.9.2
+$ llc --version
+LLVM (http://llvm.org/):
+  LLVM version 3.8.1
 ```
