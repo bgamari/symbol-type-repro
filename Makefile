@@ -1,7 +1,7 @@
 all : libtest.s main
 
 %.s : %.ll
-	llc -o $@ $+
+	llc -relocation-model=pic -o $@ $+
 
 libtest.so : libtest.o
 	gcc -shared -o $@ $+
